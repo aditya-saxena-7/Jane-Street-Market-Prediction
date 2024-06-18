@@ -10,15 +10,15 @@ Developing trading strategies to identify and take advantage of these inefficien
 
 ### The Challenge 🎯
 
-In the first three months of this challenge, you'll build your own quantitative trading model to maximize returns using market data from a major global stock exchange. Next, you'll test the predictiveness of your models against future market returns and receive feedback on the leaderboard. 📈
+I will be building my own quantitative trading model to maximize returns using market data from a major global stock exchange. Next, I'll test the predictiveness of my models against future market returns. 📈
 
-Trading for profit in today's fast-paced and complex financial markets is a challenging task. In this competition, participants are tasked with developing quantitative trading models to identify and take advantage of inefficiencies in a global stock exchange. The goal is to maximize returns using historical market data and mathematical and technological tools. 🔧📉
+Trading for profit in today's fast-paced and complex financial markets is a challenging task. In this competition, I was tasked with developing quantitative trading models to identify and take advantage of inefficiencies in a global stock exchange. The goal was to maximize returns using historical market data and mathematical and technological tools. 🔧📉
 
-Your task is to use historical data, mathematical tools, and technological tools at your disposal to create a model that gets as close to certainty as possible. You will be presented with various potential trading opportunities, which your model must choose to either accept or reject. 💡
+My task was to use historical data, mathematical tools, and technological tools at my disposal to create a model that gets as close to certainty as possible. 💡
 
 A highly predictive model that selects the right trades to execute would play a crucial role in sending market signals that push prices closer to their "fair" values. In other words, a better model will make the market more efficient going forward. However, developing good models is challenging due to many factors, including a very low signal-to-noise ratio, potential redundancy, strong feature correlation, and difficulty in coming up with a proper mathematical formulation. 🧠
 
-Jane Street has spent decades developing their own trading models and machine learning solutions to identify profitable opportunities and quickly decide whether to execute trades. These models help Jane Street trade thousands of financial products each day across 200 trading venues around the world. 🌐
+Based on Kaggle Competition Overview: Jane Street has spent decades developing their own trading models and machine learning solutions to identify profitable opportunities and quickly decide whether to execute trades. These models help Jane Street trade thousands of financial products each day across 200 trading venues around the world. 🌐
 
 Admittedly, this challenge oversimplifies the depth of the quantitative problems Jane Street professionals work on daily, but it's a fun introduction to a type of data science problem that a Jane Street employee might tackle. Jane Street looks forward to seeing the new and creative approaches the Kaggle community will take to solve this trading challenge. 🚀
 
@@ -48,7 +48,7 @@ This competition is evaluated on a utility score. Each row in the test set repre
 
 ### Submission File 📂
 
-To participate, you must submit your predictions using the provided Python time-series API, which ensures that models do not peek forward in time. Here's a template for your Kaggle Notebooks:
+I had to submit my predictions using the provided Python time-series API, which ensured that models do not peek forward in time. Here's a template from my Kaggle Notebooks:
 
 ```python
 import janestreet
@@ -60,7 +60,7 @@ for (test_df, sample_prediction_df) in iter_test:
     env.predict(sample_prediction_df)
 ```
 
-### Code Requirements 📝
+### Kaggle Code Requirements 📝
 
 - **This is a Code Competition** 🔍
 - Submissions must be made through Notebooks.
