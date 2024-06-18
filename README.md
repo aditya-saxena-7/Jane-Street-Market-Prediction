@@ -44,6 +44,100 @@ The dataset can be found here: [Jane Street Dataset](https://www.kaggle.com/comp
 - **Redundancy and Feature Correlation**: Address potential redundancy and strong correlations among features in the data. 🔗📉
 - **Mathematical Formulation**: Create mathematical formulations for trading models that maximize returns. 📐💹
 
+### Quick Summary of My Entire Code
+
+#### 1. **Data Preparation and Exploration**
+   - **Loading and Cleaning Data**:
+     - Load the training and features data.
+     - Handle missing values by calculating mean imputation values.
+   - **Feature Exploration**:
+     - Analyze the features to understand their distributions and relationships.
+   - **Dimensionality Reduction**:
+     - Use t-SNE to visualize high-dimensional data in 2D space.
+   - **Cluster Analysis**:
+     - Use K-means clustering and silhouette scores to determine the optimal number of clusters.
+
+#### 2. **Data Balancing and Splitting**
+   - **Class Balancing**:
+     - Separate the data into abundant (action=0) and rare (action=1) classes.
+     - Shuffle and split the abundant class data into three chunks.
+     - Combine each chunk with the rare class data to create balanced datasets.
+   - **Train-Test Split**:
+     - Split each balanced dataset into training and validation sets (90% training, 10% validation).
+
+#### 3. **Modeling**
+   - **LightGBM Models**:
+     - Set hyperparameters for LightGBM.
+     - Train three LightGBM models on different balanced datasets with early stopping.
+     - Save the trained LightGBM models.
+   - **Neural Network Models**:
+     - Define a custom neural network architecture using TensorFlow.
+     - Train the neural network on different balanced datasets.
+     - Compile and fit the model using AUC as the evaluation metric.
+
+#### 4. **Feature Importance**
+   - **Visualize Feature Importance**:
+     - Plot feature importance for each LightGBM model to identify the most influential features.
+
+#### 5. **Real-Time Prediction**
+   - **Initialize Jane Street Environment**:
+     - Create an environment for making real-time predictions.
+   - **Make Predictions**:
+     - Iterate over the test data.
+     - Preprocess test samples, handle missing values, and make predictions using the trained models.
+     - Average the predictions from multiple models and apply a threshold to determine the action.
+     - Submit the predictions to the environment.
+
+### Methodology
+
+1. **Data Preparation**:
+   - Clean and preprocess the data.
+   - Explore features and visualize distributions.
+   - Handle missing values using mean imputation.
+
+2. **Class Balancing**:
+   - Balance the dataset to ensure equal representation of classes in training.
+   - Create multiple balanced chunks for robust training.
+
+3. **Model Training**:
+   - Use LightGBM for tree-based modeling with hyperparameter tuning.
+   - Employ neural networks for deep learning-based predictions.
+   - Train multiple models to capture diverse patterns in the data.
+
+4. **Feature Importance Analysis**:
+   - Evaluate and visualize the importance of each feature to understand their impact on predictions.
+
+5. **Real-Time Predictions**:
+   - Implement real-time prediction logic using the Jane Street environment.
+   - Preprocess incoming data, make predictions, and submit actions based on model outputs.
+
+### Evaluation
+
+1. **Metrics**:
+   - **AUC (Area Under the Curve)**: Used as the primary metric for evaluating model performance.
+
+2. **Early Stopping**:
+   - Implemented in LightGBM training to prevent overfitting by stopping training if the validation score doesn't improve for 50 rounds.
+
+3. **Model Validation**:
+   - Split data into training and validation sets to evaluate model performance on unseen data.
+   - Monitor validation AUC to assess and compare model effectiveness.
+
+### Complete Code Summary
+
+The entire code involves:
+- Loading and preprocessing the data.
+- Handling missing values.
+- Exploring and visualizing features.
+- Balancing the dataset and creating multiple training chunks.
+- Training LightGBM and neural network models.
+- Evaluating feature importance.
+- Making real-time predictions using a production environment.
+
+Each step is designed to ensure robust model training, effective feature utilization, and accurate real-time predictions, validated using appropriate metrics and techniques.
+
+Entire Walkthrough of the codebase can be found [here](https://github.com/aditya-saxena-7/Jane-Street-Market-Prediction/blob/main/JaneStreetSubmission.ipynb)
+
 ### Evaluation 🏅
 
 This competition is evaluated on a utility score. Each row in the test set represents a trading opportunity for which you will be predicting an action value: `1` to make the trade and `0` to pass on it. Each trade `j` has an associated weight and `resp`, representing a return. 💰
