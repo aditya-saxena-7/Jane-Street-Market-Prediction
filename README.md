@@ -1,5 +1,3 @@
-# Jane-Street-Market-Prediction
-
 # Jane Street Market Prediction Challenge 📈
 
 ## Description 📊
