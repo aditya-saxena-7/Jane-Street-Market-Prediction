@@ -29,6 +29,8 @@ Admittedly, this challenge oversimplifies the depth of the quantitative problems
 - **Information on potential trading opportunities**, including weights and return information for each trade. 📜
 - The data should be divided into **training and testing datasets**. 🗂️
 
+The dataset can be found here: [Jane Street Dataset](https://www.kaggle.com/competitions/jane-street-market-prediction/data)
+
 ### Tasks 🛠️
 
 1. **Data Exploration**: Explore the data to understand its structure and relationships between variables. 🔍
